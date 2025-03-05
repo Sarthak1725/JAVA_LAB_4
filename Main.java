@@ -25,8 +25,60 @@ public class Main{
 
             choice = scanner.nextInt();
             scanner.nextLine();
+
+
+
+            switch (choice) {
+                case 1:
+                    // Print all cards in the deck
+                    deck.printDeck();
+                    break;
+                case 2:
+                    // Print a card based on user-specified index
+                    System.out.print("Enter card index (0-51): ");
+                    int index = scanner.nextInt();
+                    deck.printCard(index);
+                    break;
+                case 3:
+                    // Find all cards of a specific suit
+                    System.out.print("Enter suit: ");
+                    String suit = scanner.nextLine();
+                    deck.sameCard(suit);
+                    break;
+                case 4:
+                    // Find all cards of a specific rank
+                    System.out.print("Enter rank: ");
+                    String rank = scanner.nextLine();
+                    deck.compareCard(rank);
+                    break;
+                case 5:
+                    // Find a specific card by rank and suit
+                    System.out.print("Enter rank: ");
+                    rank = scanner.nextLine();
+                    System.out.print("Enter suit: ");
+                    suit = scanner.nextLine();
+                    deck.findCard(rank, suit);
+                    break;
+                case 6:
+                    // Deal five random cards
+                    deck.dealCard();
+                    break;
+                case 7:
+                    // Shuffle the deck
+                    deck.shuffleDeck();
+                    break;
+                case 8:
+                    // Exit the program
+                    System.out.println("Exiting program.");
+                    break;
+                default:
+                    System.out.println("Invalid choice, please try again.");
+            }
+        } while (choice != 8);
+
+        scanner.close();
             
-        } while (true);
+        
 
     }
 
