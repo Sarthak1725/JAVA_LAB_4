@@ -44,5 +44,15 @@ class Deck {
         }
     }
 
+     // Prints all cards with the specified rank
+     public void compareCard(String rank) {
+        for (Card card : deck) {
+            if (card.rank.equalsIgnoreCase(rank)) {
+                System.out.println(card);
+            }
+        }
+    }
+
+
     
 }
