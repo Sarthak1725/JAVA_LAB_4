@@ -8,6 +8,9 @@ public class Main{
         Scanner scanner = new Scanner(System.in);
         Deck deck = new Deck();
         int choice;
+        do { 
+            
+        } while (true);
 
     }
 
