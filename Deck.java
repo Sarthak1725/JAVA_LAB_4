@@ -34,5 +34,15 @@ class Deck {
         }
     }
 
+
+     // Prints all cards of the specified suit
+     public void sameCard(String suit) {
+        for (Card card : deck) {
+            if (card.suit.equalsIgnoreCase(suit)) {
+                System.out.println(card);
+            }
+        }
+    }
+
     
 }
